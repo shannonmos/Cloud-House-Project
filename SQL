@@ -1,0 +1,13 @@
+import mysql.connector
+
+db = mysql.connector.connect(host="localhost" , user= "group1", passwd= "cst498", databse= "myhouse")
+
+myhouse = db.one()
+
+ 
+
+myhouse.execute("CREATE TABLE Housing ( houseID int PRIMARY KEY auto_ increment, price int, bedrooms small int UNSIGNED, bathroom int, UNSIGNED, sqft int UNSIGNED, location VARCHAR(50), zipCode  int, levels int, pool VARCHAR(3), garage int, pantry VARCHAR(3) , walkinCloset VARCHAR(3) , porch  VARCHAR(3), patio VARCHAR(3), movieRoom VARCHAR(3), balcony VARCHAR(3), gated VARCHAR(3), waterfront VARCHAR(3), office VARCHAR(3), jacuzzi VARCHAR(3), mudroom VARCHAR(3), carport VARCHAR(3), fitnessRoom VARCHAR(3), elevator VARCHAR(3), doubleVanity VARCHAR(3), laundryRoom VARCHAR(3))")
+
+ 
+
+myhouse.execute( "INSERT INTO Housing (price) VALUES (%s,%s), ( 377100, 259000, 329900, 289900, 424900, 249900, 294900, 362900, 344900, 282300, 379900, 399200, 340900, 315000, 324900, 384900, 344900, 464900, 399900, 359900, 285000, 460000, 750000, 595000, 500000, 210000, 1550
